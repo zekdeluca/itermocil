@@ -270,6 +270,18 @@ class Itermocil(object):
                     i += 1
                     self.applescript.append(create_pane(qp, cp, "vertical"))
 
+        # 'cockpit' layout has 9 panes in a specific custom arrangement
+        elif layout == 'cockpit':
+
+            self.applescript.append(create_pane(1, 2, "vertical"))
+            self.applescript.append(create_pane(2, 3, "horizontal"))
+            self.applescript.append(create_pane(1, 4, "horizontal"))
+            self.applescript.append(create_pane(4, 5, "horizontal"))
+            self.applescript.append(create_pane(1, 6, "vertical"))
+            self.applescript.append(create_pane(2, 7, "vertical"))
+            self.applescript.append(create_pane(2, 8, "horizontal"))
+            self.applescript.append(create_pane(7, 9, "horizontal"))
+
         # Raise an exception if we don't recognise the layout setting.
         else:
             raise ValueError("Unknown layout setting.")
