@@ -255,6 +255,7 @@ In the [Layouts](https://github.com/TomAnthony/itermocil/blob/master/LAYOUTS.md)
 - 3_columns - 3 columns with as many rows as needed
 - double-main-vertical - 2 left full height columns, and a third multi-row column
 - double-main-horizontal - 2 rows, where bottom row is 2 full width columns, and top row is multi-column
+- cockpit - 9 panes in a specific custom arrangement
 
 ## teamocil
 

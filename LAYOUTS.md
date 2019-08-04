@@ -256,3 +256,42 @@ windows:
 |           |             |           |
 '-----------'-------------'-----------'
 ```
+
+### cockpit
+
+Create 9 panes in a specific custom arrangement
+
+```yaml
+windows:
+  - name: cockpit
+    root: ~
+    layout: cockpit
+    panes:
+      - echo 'LEFT-COLUMN-TOP-LEFT'
+      - echo 'RIGHT-COLUMN-TOP-TOP-LEFT'
+      - commands:
+          - echo 'RIGHT-COLUMN-BOTTOM'
+        focus: true
+      - echo 'LEFT-COLUMN-MIDDLE'
+      - echo 'LEFT-COLUMN-BOTTOM'
+      - echo 'LEFT-COLUMN-TOP-RIGHT'
+      - echo 'RIGHT-COLUMN-TOP-TOP-RIGHT'
+      - echo 'RIGHT-COLUMN-TOP-BOTTOM-LEFT'
+      - echo 'RIGHT-COLUMN-TOP-BOTTOM-RIGHT'
+```
+
+```
+.-----------.-----------.-----------.-----------.
+| (0)       | (5)       | (1)       | (6)       |
+|           |           |           |           |
+|           |           |-----------|-----------|
+|-----------'-----------| (7)       | (8)       |
+| (3)                   |           |           |
+|                       |-----------'-----------|
+|                       | (2)                   |
+|-----------------------|                       |
+| (4)                   |                       |
+|                       |                       |
+|                       |                       |
+'-----------------------'-----------------------'
+```
